@@ -20,7 +20,7 @@
 		<div class="col-sm-12">
 			<div class="foot-brand">
 				
-				QBlog | Designed By Trần Quang | COPYRIGHT © 2017 ALL RIGHTS RESERVED<br>
+				QBlog | COPYRIGHT © 2020 ALL RIGHTS RESERVED<br>
 
 				<!--DMCA-->
 				<a href="http://www.dmca.com/Protection/Status.aspx?ID=a08a412a-c816-4e6d-863e-b9ee0d4058bf" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca-badge-w250-5x1-07.png?ID=a08a412a-c816-4e6d-863e-b9ee0d4058bf" alt="DMCA.com Protection Status"></a> <script src="js/DMCABadgeHelper.min.js"> </script>

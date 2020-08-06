@@ -2,7 +2,7 @@
 <div class="head-link">
     <a href="http://etrans.hol.es" target="_blank">Effortless English</a>
     <a href="https://www.facebook.com/Qblog-Chia-sẻ-và-học-tập-657620594429250/" target="_blank">Fanpage</a>
-    <a href="https://www.youtube.com/channel/UC3WKitZ-QSPuJ_cvYSGy1Ow/feed?view_as=subscriber" target="_blank">Youtube Chanel</a>
+    <a href="https://www.youtube.com/channel/UC3WKitZ-QSPuJ_cvYSGy1Ow/feed?view_as=subscriber" target="_blank">Youtube</a>
 </div>
 <!--Backlink-->
 
@@ -10,10 +10,10 @@
     <div class="header-wall">
         <img src="img/Q-blog-wall.png" alt="">
         <!--Search-->
-        <form method="get" action="/search">
-            <input name="_token" type="hidden" value="{{{ csrf_token() }}}" >
+        <form method="get" action="/search" autocomplete="off">
+            <input  name="_token" type="hidden" value="{{{ csrf_token() }}}" >
             
-            <input class="form-control menu-search" type="text" name="search" placeholder="Search..." value="">
+            <input autocomplete="off" class="form-control menu-search" type="text" name="search" placeholder="Search..." value="">
             <span class="glyphicon glyphicon-search"></span>
             
         </form>
@@ -88,7 +88,7 @@
 					@include('pages.login')
 				</div>
 
-			@endif
+            @endif
 		</div>
 	</div>
 
@@ -99,7 +99,6 @@
 
     $(document).ready(function(){ 
 
-
         //Quick search
         $('.menu-search').keyup(function(){
         	var search = $(this).val();
@@ -109,21 +108,20 @@
            	});
         });
 
-        $('.quick-search-wrap').mouseout(function(){
-            
-            $('.quick-search-wrap').hide();
-        
+        $('.menu-search').focusout(function(e){
+            e.stopPropagation();
         });
 
         
-            
+        $(document).click(function() {
+            $('.quick-search-wrap').hide();
+        });
             
       
         //End Quick search
 
         //Responsive
         var width = $(window).width();
-        console.log(width);
         
         if(width <= 768){
         	$('.media-left').addClass('media-left-res');
@@ -131,20 +129,19 @@
 
             $('div[data-level="2"]').removeClass('level-menu');
 
-                $('a[data-level="1"]').click(function(){
-                    if($('div[data-level="2"]').hasClass('visible')){
-                        $('div[data-level="2"]').removeClass('visible');
-                    }
-                    else{
-                        $("div[data-level='2']").addClass('visible');
-                    }
-                });
+            $('a[data-level="1"]').click(function(){
+                if($('div[data-level="2"]').hasClass('visible')){
+                    $('div[data-level="2"]').removeClass('visible');
+                }
+                else{
+                    $("div[data-level='2']").addClass('visible');
+                }
+            });
         }
         
         $(window).resize(function(){
         	var width = $(window).width();
         		
-
         	if(width <= 768){
         		$('.media-left').addClass('media-left-res');
         		$('.media-left').removeClass('media-left');
@@ -196,20 +193,15 @@
 
         //Login Check
         var login = "{{ Session::get('login') }}";
-
+        console.log({login})
         
         if(login == "fail"){
         	$('.alert-danger').html("<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><i class='fa fa-times-circle'></i> Tài khoản hoặc mật khẩu không đúng");
 
         	$('.alert-danger').addClass('alert');
-        	$('#myModal').modal('show');
-
-        	{{Session::forget('login')}}
+            $('#myModal').modal('show');
+            {{Session::forget('login')}}
         }
         //End Login Check
-
-        
-        
-        
     });
 </script>

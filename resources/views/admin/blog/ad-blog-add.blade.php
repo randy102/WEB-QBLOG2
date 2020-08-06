@@ -2,7 +2,7 @@
 	<small>Thêm</small>
 </h2>
 
-<form action="admin/blogDoAdd" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+<form action="admin/blogDoAdd" method="post" accept-charset="utf-8" enctype="multipart/form-data" id="blog-form">
 
 	<input name="_token" type="hidden" value="{{{ csrf_token() }}}" > 
 
@@ -59,6 +59,7 @@
 	 CKEDITOR.replace('editor1',{
 	 	 filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images'
 	 });
+
 </script>
 
 	

@@ -59,7 +59,38 @@ Từ khóa
 
 	<hr>
 
+	
+
 	<!--Newest List-->
+	<div class="row">
+		<div class="title-group">
+			Mới ra lò
+		</div>
+
+		<div class="newest-wrap">
+			@foreach($newests as $blog)
+
+			<a href="/blog/{{$blog->category->link_name}}/{{$blog->link_name}}/{{$blog->id}}.html">
+			<div class="media">
+				<div class="media-left">
+					<img src="img/{{$blog->img}}" class="media-object">
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">{{$blog->title}}</h4>
+					<p>{{str_limit($blog->short,180)}}...</p>
+					<span class="category-tag">{{$blog->category->name}}</span>
+				</div>
+			</div>
+			</a>
+
+			@endforeach
+
+		</div>
+		
+	</div>
+	<!--/Newest List-->
+
+	<!--Hilight List-->
 	<div class="row">
 		<div class="title-group">
 			Bài viết nổi bật
@@ -86,7 +117,7 @@ Từ khóa
 		</div>
 		
 	</div>
-	<!--/Newest List-->
+	<!--/Hiligh List-->
 
 	<!-- Random List-->
 	<div class="row">
@@ -118,34 +149,7 @@ Từ khóa
 	<!--/Random List -->
 	
 
-	<!--Newest List-->
-	<div class="row">
-		<div class="title-group">
-			Mới ra lò
-		</div>
-
-		<div class="newest-wrap">
-			@foreach($newests as $blog)
-
-			<a href="/blog/{{$blog->category->link_name}}/{{$blog->link_name}}/{{$blog->id}}.html">
-			<div class="media">
-				<div class="media-left">
-					<img src="img/{{$blog->img}}" class="media-object">
-				</div>
-				<div class="media-body">
-					<h4 class="media-heading">{{$blog->title}}</h4>
-					<p>{{str_limit($blog->short,180)}}...</p>
-					<span class="category-tag">{{$blog->category->name}}</span>
-				</div>
-			</div>
-			</a>
-
-			@endforeach
-
-		</div>
-		
-	</div>
-	<!--/Newest List-->
+	
 
 
 

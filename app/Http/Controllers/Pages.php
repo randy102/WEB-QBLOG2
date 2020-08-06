@@ -88,12 +88,12 @@ class Pages extends Controller
         $random = Blog::inRandomOrder()->orderBy('created_at','DESC')->take(5)->get();
 
     	return view('pages.home',[
-    			'slides'	=>$slides,
-                'newests'   =>$newests,
-                'des'       =>$des,
-                'limit'     =>$limit,
-                'random'    =>$random
-    		]);
+    		'slides'	=>$slides,
+            'newests'   =>$newests,
+            'des'       =>$des,
+            'limit'     =>$limit,
+            'random'    =>$random
+    	]);
     }
 
     public function reportPost($report){
@@ -106,9 +106,7 @@ class Pages extends Controller
 
     public function categoryLoad($name,$id){
         $blogs = Blog::where('id_category',$id)->orderBy('created_at','DESC')->paginate(10);
-
         $category = Category::find($id);
-
         return view('pages.category',['blogs'=>$blogs, 'category'=>$category]);
     }
 

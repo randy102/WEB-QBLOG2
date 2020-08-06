@@ -31,7 +31,7 @@ class Admin_Blog_CL extends Controller
 
 
     	$blog->title = $request->title;
-        $blog->link_name = changeTitle($request->title);
+      $blog->link_name = changeTitle($request->title);
     	$blog->short = $request->short;
     	$blog->content = $request->content;
     	$blog->highlight = $request->highlight;
@@ -42,7 +42,6 @@ class Admin_Blog_CL extends Controller
     	$blog->save();
 
     	return redirect()->route('master',['page'=>'blogList']);
-    		
     }
 
     public function blogList(){
@@ -57,10 +56,7 @@ class Admin_Blog_CL extends Controller
     		unlink("img/".$blog->img);
     	}
 
-        $comments = Comment::where('id_blog',$id);
-
-        $comments->delete();
-
+			$blog->comments()->delete();
     	$blog->delete();
 
 
@@ -91,7 +87,7 @@ class Admin_Blog_CL extends Controller
     	}
 
     	$blog->title = $request->title;
-        $blog->link_name = changeTitle($request->title);
+      $blog->link_name = changeTitle($request->title);
     	$blog->short = $request->short;
     	$blog->content = $request->content;
     	$blog->highlight = $request->highlight;

@@ -104,10 +104,17 @@
                 });
 
                 //Page click
-                $(document).on('click','.btn',function(){
+                $(document).on('click','.btn',function(e){
                     var page = $(this).attr('data-page');
                     var id = $(this).attr('data-id');
-                    
+                    let className = $(this).attr('class');
+                    if(className === "btn btn-danger"){
+                        const conf = confirm("Bạn có muốn xóa?")
+                        if(!conf){
+                            e.preventDefault()
+                            return;
+                        }
+                    }
                     if(typeof page != "undefined"){
                         $('.content').hide();
                         $('.loader').show();

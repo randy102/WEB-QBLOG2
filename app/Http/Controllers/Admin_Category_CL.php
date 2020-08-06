@@ -25,7 +25,13 @@ class Admin_Category_CL extends Controller
     }
 
     public function categoryDelete($id){
-    	$category = Category::find($id);
+        $category = Category::find($id);
+        $blogs = $category->blogs();
+        
+        foreach($blogs as $blog) 
+            $blog->comments()->delete();
+        
+        $blogs->delete();
     	$category->delete();
     	return $this->categoryList();
     }

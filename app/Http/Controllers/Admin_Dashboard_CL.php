@@ -40,9 +40,9 @@ class Admin_Dashboard_CL extends Controller
     			'num_comment' => $num_comment,
     			'most_views' => $most_views,
     			'newest_comment' => $newest_comment,
-                'good' => $num_good,
-                'normal'=> $num_normal,
-                'bad' => $num_bad
+          'good' => $num_good,
+          'normal'=> $num_normal,
+          'bad' => $num_bad
     		]);
     }
 }

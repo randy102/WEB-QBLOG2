@@ -61,8 +61,8 @@ class Admin_User_CL extends Controller
     	$user->email = $request->email;
     	$user->level = $request->level;
         
-        if($request->password != "")
-    	   $user->password = Hash::make($request->password);
+      if($request->password != "")
+    	  $user->password = Hash::make($request->password);
 
     	$user->save();
 
