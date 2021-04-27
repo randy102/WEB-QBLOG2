@@ -1,0 +1,89 @@
+#footer {
+  width: 100%;
+  background: #313131;
+  padding: 15px 0;
+}
+#footer hr {
+  border: solid 1px #f3bc00;
+}
+#footer .foot-category-wrap {
+  margin-bottom: 10px;
+}
+#footer .foot-category-wrap a {
+  display: inline-block;
+  padding: 12px 15px;
+  font-weight: bold;
+  color: #313131;
+  font-size: 15px;
+  border-radius: 50px;
+  background: #fff;
+  margin: 10px 10px;
+  transition: all 0.33s;
+}
+#footer .foot-category-wrap a:hover {
+  box-shadow: 0 10px 10px -5px #8a8a8a;
+  transform: translateY(-10px);
+  transition: all 0.2s;
+}
+#footer .foot-brand {
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+#footer .foot-brand #foot-brand-img {
+  float: left;
+}
+.info-item {
+  position: fixed;
+  background: #676767;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: -1px 1px 5px #000000;
+}
+.info-item .info-icon {
+  display: inline-block;
+  background: #313131;
+}
+.info-item .info-icon i {
+  color: #fff;
+  padding: 20px;
+  font-size: 22px;
+}
+.info-item .info-content {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  width: 0px;
+  transition: all 0.3s ease;
+}
+.info-item:hover > .info-content {
+  width: 200px;
+  transition: all 0.3s ease;
+}
+.info-phone {
+  right: 0px;
+  bottom: 100px;
+}
+.info-phone i {
+  padding: 20px 22px !important;
+}
+.info-email {
+  right: 0px;
+  bottom: 180px;
+}
+.info-gotop {
+  right: 3px;
+  bottom: 22px;
+  display: none;
+}
+.info-gotop i {
+  font-size: 35px !important;
+  padding: 14px 20px !important;
+}
