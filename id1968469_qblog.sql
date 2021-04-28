@@ -271,7 +271,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `level`, `created_at`, `updated_at`, `remember_token`) VALUES
-(19, 'Randy Liu', 'welldey102@gmail.com', '$2y$10$baanonsc40L.z3hJWI6iteoNw9TofQoHonPiUx62s3fGn.LkztuG2', 1, '2017-06-03 20:41:42', '2017-06-19 11:35:53', 'bWsTXFOT8T5gwm3QqQZCnPeH74QAlAGnDT6pSU9X1XpVAD9nhUsHIdsxbsTw');
+(19, 'Randy Liu', 'welldey102@gmail.com', '$2y$10$aFlY0paEErxGIu8WqucA7erSx0mIFgc.lc.mP2lyDDua0th3hqFhO', 1, '2017-06-03 20:41:42', '2017-06-19 11:35:53', 'bWsTXFOT8T5gwm3QqQZCnPeH74QAlAGnDT6pSU9X1XpVAD9nhUsHIdsxbsTw');
 
 --
 -- Chỉ mục cho các bảng đã đổ
