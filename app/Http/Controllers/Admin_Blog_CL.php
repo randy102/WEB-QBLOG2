@@ -74,8 +74,10 @@ class Admin_Blog_CL extends Controller
     	$blog = Blog::find($id);
 
     	if($request->hasFile('img')){
+    	    if(file_exists("img/".$blog->img)){
+    		    unlink("img/".$blog->img);
+            }
 
-    		unlink("img/".$blog->img);
 
     		$img_name = $request->img->getClientOriginalName();
 
