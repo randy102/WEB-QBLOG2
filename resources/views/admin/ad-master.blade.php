@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/font-awesome.min.css') }}">
 
-        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/index.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/admin.css') }}" />
        
         <!--/CSS-->
 
