@@ -17,8 +17,7 @@
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/app.css') }}">
 
-        <link rel="stylesheet/less" type="text/css" href="{{ secure_asset('css/index.less?v=1.17') }}" />
-        <link rel="stylesheet/less" type="text/css" href="{{ secure_asset('css/blog.less?v=1.6') }}" />
+        <link rel="stylesheet/less" type="text/css" href="{{ secure_asset('css/index.css') }}" />
 
         <!--/CSS-->
 
