@@ -8,10 +8,10 @@
 
         <!--CSS-->
         <base href="{{asset('')}}"> 
-        <link rel="stylesheet" type="text/css" href="css/app.css">
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/font-awesome.min.css') }}">
 
-        <link rel="stylesheet/less" type="text/css" href="css/admin.less?v=1.10">
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/index.css') }}" />
        
         <!--/CSS-->
 
@@ -20,14 +20,14 @@
         <!--/Favicon-->
 
         <!--Scrip-->
-        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/app.js') }}"></script>
 
-        <script type="text/javascript" src="js/less.min.js" ></script>
+        <script type="text/javascript" src="{{ secure_asset('js/less.min.js') }}" ></script>
 
-        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/jquery-3.2.1.min.js') }}"></script>
 
 
-        <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="{{ secure_asset('ckeditor/ckeditor.js') }}"></script>
         
 
         <!--Chart Plugin-->
@@ -40,11 +40,11 @@
         <!--Data Table-->
 
         <!-- DataTables CSS -->
-        <link href="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+        <link href="{{ secure_asset('bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css') }}" rel="stylesheet">
 
 
-        <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-        <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+        <script src="{{ secure_asset('bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ secure_asset('bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
 	       
         <!--/Data Table-->  
 

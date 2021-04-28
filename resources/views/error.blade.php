@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Error</title>
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
         
         <style type="text/css" media="screen">
         	.alert{

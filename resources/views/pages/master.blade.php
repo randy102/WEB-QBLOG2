@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/font-awesome.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/app.css') }}">
 
-        <link rel="stylesheet/less" type="text/css" href="{{ secure_asset('css/index.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/index.css') }}" />
 
         <!--/CSS-->
 
@@ -27,11 +27,11 @@
 
         <!--Scrip-->
 
-        <script src="js/less.min.js" type="text/javascript"></script>
+        <script src="{{ secure_asset('js/less.min.js') }}" type="text/javascript"></script>
 
-        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/jquery-3.2.1.min.js') }}"></script>
 
-        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/bootstrap.js') }}"></script>
 
         <script type="text/javascript">var switchTo5x=true;</script>
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
